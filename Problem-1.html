@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        
+        function result(){
+            var num1 = +document.getElementById("firstNumber").value;
+            var num2 = +document.getElementById("secondNumber").value;
+            var oper = document.getElementById("operator").value;
+            console.log(oper);
+            console.log(typeof oper);
+            if(oper === "+"){
+                document.getElementById("result").innerHTML = num1 + num2;
+            }else if(oper === "-"){
+                document.getElementById("result").innerHTML = num1 - num2;
+            }else if(oper === "*"){
+                document.getElementById("result").innerHTML = num1 * num2;
+            }else if(oper === "/"){
+                document.getElementById("result").innerHTML = num1 / num2;
+            }else{
+                document.getElementById("result").innerHTML = "Please Enter Correct Operation Value";
+            }
+        }
+
+    </script>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Problem-1</h1>
+        <form>
+            Input a: <input type="text" id="firstNumber" />
+            Input b: <input type="text" id="secondNumber" />
+            operation: <input type="text" id="operator"/>
+            <input type="button" onClick="result()" value="Result"/>
+        </form>
+        <br>
+        <p>The Result is : <br> <span id = "result"></span> </p>
+       
+    </div>
+</body>
+</html>

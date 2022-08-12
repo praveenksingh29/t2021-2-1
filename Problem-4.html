@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        let a = [1,2,3,4,5,6,7,8,9];
+        let x = 0;
+        var num = 0;
+        const array = Array();
+        function add(){
+            array[x] = +document.getElementById("firstNumber").value;
+            alert(`Element: ${array[x]} Added at index ${x}`);
+            x++;
+            document.getElementById("firstNumber").value = "";
+            document.getElementById("add").innerText = array;
+            console.log(array);
+        }
+        function result(){
+            for(let i=0; i<a.length; i++){
+                for(let j=0; j<array.length; j++){
+                    if(array[j]%a[i]==0){
+                         num = num + 1;
+                    }
+                }
+                document.getElementById("result").innerHTML += a[i]+":"+num+", ";
+                num = 0;
+            }
+        }
+    </script>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+            <h1>Problem-4</h1>
+            Input: <input type="text" id="firstNumber" />
+            <input type="button" onClick="add()" value="Element add"/>
+            <br>
+            <p> Element add : <span id = "add"></span> </p>
+            <br>
+            <input type="button" onClick="result()" value="Result"/>
+            <br>
+            <p>The Result is : <spajn id="result"> </spajn></p>
+       
+    </div>
+</body>
+</html>

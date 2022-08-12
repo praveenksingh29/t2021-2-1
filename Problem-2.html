@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        
+        function result(){
+            document.getElementById("result").innerHTML = '';
+            var num1 = +document.getElementById("firstNumber").value;
+            for(let i=1; i<=num1; i++){
+                
+                if(i%2!==0){
+                    document.getElementById("result").innerHTML += i + ", ";
+                }else{
+                    num1 = num1 + 1;
+                }
+            }
+        }
+
+    </script>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+            <h1>Problem-2</h1>
+            Input a: <input type="text" id="firstNumber" />
+            <br>
+            <br>
+            <input type="button" onClick="result()" value="Result"/>
+            <br>
+            <p>The Result is : <br> <span id = "result"></span> </p>
+       
+    </div>
+</body>
+</html>
